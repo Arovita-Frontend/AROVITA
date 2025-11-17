@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../../utils/responsive.dart';
 
 class ComingSoonSection extends StatelessWidget {
   const ComingSoonSection({super.key});
@@ -7,12 +8,11 @@ class ComingSoonSection extends StatelessWidget {
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
 
-    // Responsive adjustments
     final iconSize = width < 500 ? 28.0 : 34.0;
-    final titleSize = width < 500 ? 16.0 : 18.0;
-    final subtitleSize = width < 500 ? 13.0 : 14.0;
-    final buttonFont = width < 500 ? 14.0 : 16.0;
-    final buttonHeight = width < 500 ? 40.0 : 44.0;
+    final titleSize = Responsive.cardHeading + 2; 
+    final subtitleSize = Responsive.cardParagraph;
+    final buttonFont = Responsive.cardHeading;
+    final buttonHeight = Responsive.buttonHeight + 4;
     final buttonWidth = width < 500 ? 140.0 : 160.0;
 
     return Container(

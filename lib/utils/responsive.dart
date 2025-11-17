@@ -1,5 +1,77 @@
+import 'package:flutter/material.dart';
+
 class Responsive {
-  static bool isMobile(double width) => width < 600;
-  static bool isTablet(double width) => width >= 600 && width < 1024;
-  static bool isDesktop(double width) => width >= 1024;
+  static late double width;
+  static late double height;
+
+  static void init(BuildContext context){
+    width = MediaQuery.of(context).size.width;
+    height = MediaQuery.of(context).size.height;
+  }
+
+  static bool get isMobile => width < 600;
+  static bool get isTablet => width >= 600 && width < 1024;
+  static bool get isDesktop => width >= 1024;
+
+  // ################ Text Sizes ################
+  static double get heading {
+    if(isDesktop) return 35;
+    if(isTablet) return 23;
+    return 28;    /// mobile
+  }
+
+  static double get subHeading {
+    if(isDesktop) return 24;
+    if(isTablet) return 20;
+    return 18;
+  }
+
+  static double get paragraph {
+    if(isDesktop) return 18;
+    if(isTablet) return 16;
+    return 14;
+  }
+
+  static double get cardHeading {
+    if(isDesktop) return 17;
+    if(isTablet) return 15;
+    return 13; 
+  }
+
+  static double get cardParagraph {
+    if(isDesktop) return 15;
+    if(isTablet) return 12;
+    return 10;
+  }
+  
+  static double get buttonHeight {
+    if(isDesktop) return 40;
+    if(isTablet) return 38;
+    return 37;
+  }
+
+  // ################ Icon / Floating Button Sizes ################
+  static double get floatingButtonSize {
+    if(isDesktop) return 60;
+    if(isTablet) return 53;
+    return 43.5; // Mobile
+  }
+
+  static double get floatingIconSize {
+    if(isDesktop) return 28;
+    if(isTablet) return 24;
+    return 20; // Mobile
+  }
+
+  static double get floatingBadgeSize {
+    if(isDesktop) return 24;
+    if(isTablet) return 20;
+    return 16;
+  }
+
+  static double get floatingBadgeFont {
+    if(isDesktop) return 12;
+    if(isTablet) return 10;
+    return 8;
+  }
 }

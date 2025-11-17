@@ -9,24 +9,26 @@ class AddMemberCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
-        final isMobile = Responsive.isMobile(constraints.maxWidth);
+        // Use constraints for local responsiveness
+        final isMobile = constraints.maxWidth < 600;
 
         final double cardWidth = isMobile ? 161.5 : 453.3;
-        final double cardHeight = isMobile ? 98 : 190;
+        final double cardHeight = isMobile ? 98 : 198;
+        final double borderRadius = isMobile ? 12 : 8;
+        final double iconSize = isMobile ? 32 : 40;
 
         return DottedBorder(
           color: const Color(0xFF7C3AED),
           strokeWidth: 2,
           dashPattern: const [4, 3],
           borderType: BorderType.RRect,
-          radius: Radius.circular(isMobile ? 12 : 8),
-
+          radius: Radius.circular(borderRadius),
           child: Container(
             width: cardWidth,
             height: cardHeight,
             decoration: BoxDecoration(
               color: Colors.white,
-              borderRadius: BorderRadius.circular(isMobile ? 12 : 8),
+              borderRadius: BorderRadius.circular(borderRadius),
               boxShadow: const [
                 BoxShadow(
                   color: Color(0x11000000),
@@ -41,14 +43,14 @@ class AddMemberCard extends StatelessWidget {
                 children: [
                   Icon(
                     Icons.add,
-                    size: isMobile ? 32 : 40,
+                    size: iconSize,
                     color: const Color(0xFF7C3AED),
                   ),
                   const SizedBox(height: 6),
                   Text(
                     "Add Member",
                     style: TextStyle(
-                      fontSize: isMobile ? 14 : 16,
+                      fontSize: Responsive.paragraph, // keep centralized text size
                       fontWeight: FontWeight.w500,
                       color: const Color(0xFF7C3AED),
                     ),

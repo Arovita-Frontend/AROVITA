@@ -4,6 +4,7 @@ import 'screens/appointments/appointment_page.dart';
 import 'screens/chat/chat_page.dart';
 import 'screens/profile/profile_page.dart';
 import 'screens/activity/activity_page.dart';
+import 'utils/responsive.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,18 +15,23 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        // Initialize Responsive once with screen dimensions
+        Responsive.init(context);
 
-      routes: {
-        '/home': (_) => const HomePage(),
-        '/appointments': (_) => const AppointmentPage(),
-        '/chat': (_) => const ChatPage(),
-        '/profile': (_) => const ProfilePage(),
-        '/activity': (_) => const ActivityPage(),
+        return MaterialApp(
+          debugShowCheckedModeBanner: false,
+          routes: {
+            '/home': (_) => const HomePage(),
+            '/appointments': (_) => const AppointmentPage(),
+            '/chat': (_) => const ChatPage(),
+            '/profile': (_) => const ProfilePage(),
+            '/activity': (_) => const ActivityPage(),
+          },
+          initialRoute: '/home',
+        );
       },
-
-      initialRoute: '/home',
     );
   }
 }

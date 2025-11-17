@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
+import '../../../utils/responsive.dart';
 
 class HeartRateCard extends StatelessWidget {
   const HeartRateCard({super.key});
@@ -28,7 +29,6 @@ class HeartRateCard extends StatelessWidget {
           BoxShadow(color: Color(0x1A000000), blurRadius: 6, offset: Offset(0, 4)),
         ],
       ),
-
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -41,46 +41,45 @@ class HeartRateCard extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text(
+                  Text(
                     "Heart Rate",
                     style: TextStyle(
-                      fontSize: 18,
+                      fontSize: Responsive.subHeading,
                       fontWeight: FontWeight.w600,
-                      color: Color(0xFF1E293B),
+                      color: const Color(0xFF1E293B),
                       fontFamily: "Inter",
                     ),
                   ),
                   const SizedBox(height: 8),
-
                   Row(
                     children: [
-                      const Text(
+                      Text(
                         "72",
                         style: TextStyle(
-                          fontSize: 30,
+                          fontSize: Responsive.subHeading,
                           fontWeight: FontWeight.w700,
-                          color: Color(0xFF1E293B),
+                          color: const Color(0xFF1E293B),
                         ),
                       ),
                       const SizedBox(width: 8),
-                      const Text(
+                      Text(
                         "BPM",
                         style: TextStyle(
-                          fontSize: 14,
-                          color: Color(0xFF64748B),
+                          fontSize: Responsive.cardHeading,
+                          color: const Color(0xFF64748B),
                         ),
                       ),
                       const SizedBox(width: 12),
                       Container(
                         padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                         decoration: BoxDecoration(
-                          color: Color(0xFF16A34A),
+                          color: const Color(0xFF16A34A),
                           borderRadius: BorderRadius.circular(999),
                         ),
-                        child: const Text(
+                        child: Text(
                           "Calm",
                           style: TextStyle(
-                            fontSize: 12,
+                            fontSize: Responsive.paragraph - 4,
                             fontWeight: FontWeight.w500,
                             color: Colors.white,
                           ),
@@ -99,39 +98,37 @@ class HeartRateCard extends StatelessWidget {
               ),
             ],
           ),
-
           const SizedBox(height: 20),
-
           // SECOND ROW
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const Text(
+              Text(
                 "HRV: 45ms | Stress: Low",
                 style: TextStyle(
-                  fontSize: 14,
-                  color: Color(0xFF64748B),
+                  fontSize: Responsive.paragraph - 3,
+                  color: const Color(0xFF64748B),
                 ),
               ),
               Container(
-                height: 40,
+                height: 35,
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 decoration: BoxDecoration(
-                  color: Color(0xFF7C3AED),
+                  color: const Color(0xFF7C3AED),
                   borderRadius: BorderRadius.circular(8),
                 ),
                 alignment: Alignment.center,
-                child: const Text(
+                child: Text(
                   "Measure now",
                   style: TextStyle(
-                    fontSize: 16,
+                    fontSize: Responsive.paragraph-2,
                     fontWeight: FontWeight.w500,
                     color: Colors.white,
                   ),
                 ),
-              )
+              ),
             ],
-          )
+          ),
         ],
       ),
     );
@@ -150,7 +147,6 @@ class HeartRateCard extends StatelessWidget {
           BoxShadow(color: Color(0x1A000000), blurRadius: 6, offset: Offset(0, 4)),
         ],
       ),
-
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -158,61 +154,57 @@ class HeartRateCard extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const Text(
+              Text(
                 "Heart Rate",
                 style: TextStyle(
-                  fontSize: 18,
+                  fontSize: Responsive.subHeading,
                   fontWeight: FontWeight.w600,
-                  color: Color(0xFF1E293B),
+                  color: const Color(0xFF1E293B),
                   fontFamily: "Inter",
                 ),
               ),
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
                 decoration: BoxDecoration(
-                  color: Color(0xFF16A34A),
+                  color: const Color(0xFF16A34A),
                   borderRadius: BorderRadius.circular(9999),
                 ),
-                child: const Text(
+                child: Text(
                   "Calm",
                   style: TextStyle(
-                    fontSize: 12,
+                    fontSize: Responsive.paragraph - 2,
                     color: Colors.white,
                   ),
                 ),
-              )
+              ),
             ],
           ),
-
           const SizedBox(height: 20),
-
-          // SECOND ROW: 72 + BPM + Graph
+          // SECOND ROW
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              // LEFT COLUMN (72 + BPM)
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: const [
+                children: [
                   Text(
                     "72",
                     style: TextStyle(
-                      fontSize: 36,
+                      fontSize: Responsive.heading,
                       fontWeight: FontWeight.w700,
-                      color: Color(0xFF1E293B),
+                      color: const Color(0xFF1E293B),
                     ),
                   ),
-                  SizedBox(height: 4),
+                  const SizedBox(height: 4),
                   Text(
                     "BPM",
                     style: TextStyle(
-                      fontSize: 14,
-                      color: Color(0xFF64748B),
+                      fontSize: Responsive.paragraph,
+                      color: const Color(0xFF64748B),
                     ),
                   ),
                 ],
               ),
-
               // RIGHT GRAPH BOX
               Container(
                 width: 96,
@@ -227,18 +219,16 @@ class HeartRateCard extends StatelessWidget {
                     begin: Alignment.centerLeft,
                     end: Alignment.centerRight,
                   ),
-                  border: Border.all(color: Color(0xFFE5E7EB)),
+                  border: Border.all(color: const Color(0xFFE5E7EB)),
                 ),
               ),
             ],
           ),
-
           const SizedBox(height: 20),
-
           // THIRD ROW – Button
           SizedBox(
             width: double.infinity,
-            height: 48,
+            height: Responsive.buttonHeight,
             child: ElevatedButton.icon(
               style: ElevatedButton.styleFrom(
                 backgroundColor: const Color(0xFF7C3AED),
@@ -247,17 +237,17 @@ class HeartRateCard extends StatelessWidget {
                 ),
               ),
               icon: const Icon(Iconsax.camera, color: Colors.white, size: 20),
-              label: const Text(
+              label: Text(
                 "Measure now",
                 style: TextStyle(
-                  fontSize: 16,
+                  fontSize: Responsive.paragraph,
                   fontWeight: FontWeight.w500,
                   color: Colors.white,
                 ),
               ),
               onPressed: () {},
             ),
-          )
+          ),
         ],
       ),
     );

@@ -13,7 +13,7 @@ class AppSection extends StatelessWidget {
     double horizontalPadding;
 
     if (width > 1400) {
-      horizontalPadding = 32;
+      horizontalPadding = 40;
     } else if (width > 900) {
       horizontalPadding = 24;
     } else if (width > 600) {
@@ -25,7 +25,7 @@ class AppSection extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(
         horizontal: horizontalPadding,
-        vertical: 12, // consistent vertical spacing
+        vertical: 17, // consistent vertical spacing
       ),
       child: child,
     );

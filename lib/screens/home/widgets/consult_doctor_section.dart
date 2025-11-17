@@ -117,7 +117,7 @@ class ConsultDoctorSection extends StatelessWidget {
               }
 
               return Wrap(
-                spacing: 20,
+                spacing: 22,
                 runSpacing: 16,
                 children: doctors.map((doctor) {
                   return DoctorInfoCard(
@@ -125,7 +125,7 @@ class ConsultDoctorSection extends StatelessWidget {
                     field: doctor["field"]!,
                     imagePath: doctor["image"]!,
                     isMobile: isMobile,
-                    width: cardWidth,
+                    width: cardWidth+3,
                   );
                 }).toList(),
               );

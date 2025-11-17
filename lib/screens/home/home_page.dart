@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../utils/app_section.dart'; 
+import '../../utils/app_section.dart';
 import 'widgets/home_header.dart';
 import 'widgets/notification_banner.dart';
 import 'widgets/heart_rate_card.dart';
@@ -8,6 +8,8 @@ import '../../core/widgets/bottom_nav_bar.dart';
 import './widgets/family_health_section.dart';
 import './widgets/daily_activity_summary_section.dart';
 import './widgets/coming_soon_section.dart';
+import './widgets/health_tips_section.dart';
+import '../../utils/floating_message_button.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -18,22 +20,36 @@ class HomePage extends StatelessWidget {
       backgroundColor: const Color(0xFFF5F3FF),
       bottomNavigationBar: const BottomNavBar(currentIndex: 0),
 
-      body: SingleChildScrollView(
-        child: Column(
-          children: const [
-            SizedBox(height: 16),
+      body: Stack(
+        children: [
+          // MAIN SCROLL CONTENT
+          SingleChildScrollView(
+            child: Column(
+              children: const [
+                SizedBox(height: 16),
 
-            AppSection(child: HomeHeader()),
-            AppSection(child: NotificationBanner()),
-            AppSection(child: HeartRateCard()),
-            AppSection(child: ConsultDoctorSection()),
-            AppSection(child: FamilyHealthSection()),
-            AppSection(child: DailyActivitySummary()),
-            AppSection(child: ComingSoonSection()),
+                AppSection(child: HomeHeader()),
+                AppSection(child: NotificationBanner()),
+                AppSection(child: HeartRateCard()),
+                AppSection(child: ConsultDoctorSection()),
+                AppSection(child: FamilyHealthSection()),
+                AppSection(child: DailyActivitySummary()),
+                AppSection(child: HealthTipsSection()),
+                AppSection(child: ComingSoonSection()),
 
-            SizedBox(height: 40),
-          ],
-        ),
+                SizedBox(height: 40),
+              ],
+            ),
+          ),
+
+          // FLOATING MESSAGE BUTTON
+          FloatingMessageButton(
+            unreadCount: 2,     // dynamic count of messages
+            onTap: () {
+              Navigator.pushNamed(context, '/chat');
+            },
+          ),
+        ],
       ),
     );
   }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../../utils/responsive.dart';
 
 class DoctorInfoCard extends StatelessWidget {
   final String name;
@@ -28,7 +29,7 @@ class DoctorInfoCard extends StatelessWidget {
         border: Border.all(color: const Color(0xFFE5E7EB)),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withValues(alpha: 0.05),
+            color: Colors.black.withOpacity(0.05),
             blurRadius: 2,
             offset: const Offset(0, 1),
           ),
@@ -47,35 +48,35 @@ class DoctorInfoCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                // Name
                 Text(
                   name,
-                  style: const TextStyle(
-                    fontSize: 16,
+                  style: TextStyle(
+                    fontSize: Responsive.paragraph,
                     fontWeight: FontWeight.w500,
                   ),
                 ),
                 const SizedBox(height: 2),
+                // Field / specialization
                 Text(
                   field,
-                  style: const TextStyle(
-                    fontSize: 14,
-                    color: Color(0xFF64748B),
+                  style: TextStyle(
+                    fontSize: Responsive.cardParagraph,
+                    color: const Color(0xFF64748B),
                   ),
                 ),
               ],
             ),
           ),
 
-          if (isMobile)
-            const Text(
-              "● Available",
-              style: TextStyle(color: Color(0xFF16A34A), fontSize: 12),
-            )
-          else
-            const Text(
-              "● Available now",
-              style: TextStyle(color: Color(0xFF16A34A), fontSize: 12),
+          // Availability text
+          Text(
+            isMobile ? "● Available" : "● Available now",
+            style: TextStyle(
+              color: const Color(0xFF16A34A),
+              fontSize: Responsive.cardHeading-1,
             ),
+          ),
         ],
       ),
     );

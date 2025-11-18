@@ -31,7 +31,7 @@ class ConsultButton extends StatelessWidget {
             "Start Tele-Consultation",
             style: TextStyle(
               fontFamily: "Inter",
-              fontSize: Responsive.cardHeading,
+              fontSize: Responsive.desktopText16,
               fontWeight: FontWeight.w500,
               color: Colors.white,
               height: 1.0,

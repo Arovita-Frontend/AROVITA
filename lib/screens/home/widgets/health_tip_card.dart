@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../models/health_tip.dart';
+import '../../../utils/responsive.dart';
 
 class HealthTipCard extends StatelessWidget {
   final HealthTip tip;
@@ -52,8 +53,8 @@ class HealthTipCard extends StatelessWidget {
                 // Title
                 Text(
                   tip.title,
-                  style: const TextStyle(
-                    fontSize: 16,
+                  style: TextStyle(
+                    fontSize: Responsive.desktopText16,
                     fontWeight: FontWeight.w600,
                   ),
                 ),
@@ -66,7 +67,7 @@ class HealthTipCard extends StatelessWidget {
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(
-                    fontSize: 12,
+                    fontSize: Responsive.desktopText12,
                     color: Colors.grey.shade700,
                   ),
                 ),
@@ -74,10 +75,10 @@ class HealthTipCard extends StatelessWidget {
                 const SizedBox(height: 8),
 
                 // Read More
-                const Text(
+                Text(
                   "Read More",
                   style: TextStyle(
-                    fontSize: 12,
+                    fontSize: Responsive.desktopText12,
                     color: Color(0xFF7C3AED),
                     fontWeight: FontWeight.w500,
                   ),

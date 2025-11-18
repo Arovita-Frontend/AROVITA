@@ -52,7 +52,7 @@ class DoctorInfoCard extends StatelessWidget {
                 Text(
                   name,
                   style: TextStyle(
-                    fontSize: Responsive.paragraph,
+                    fontSize: Responsive.desktopText16,
                     fontWeight: FontWeight.w500,
                   ),
                 ),
@@ -61,7 +61,7 @@ class DoctorInfoCard extends StatelessWidget {
                 Text(
                   field,
                   style: TextStyle(
-                    fontSize: Responsive.cardParagraph,
+                    fontSize: Responsive.desktopText14,
                     color: const Color(0xFF64748B),
                   ),
                 ),
@@ -74,7 +74,7 @@ class DoctorInfoCard extends StatelessWidget {
             isMobile ? "● Available" : "● Available now",
             style: TextStyle(
               color: const Color(0xFF16A34A),
-              fontSize: Responsive.cardHeading-1,
+              fontSize: Responsive.desktopText12,
             ),
           ),
         ],

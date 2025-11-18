@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../../models/activity_data.dart';
 import './activity_card.dart';
+import '../../../utils/responsive.dart';
 
 class DailyActivitySummary extends StatelessWidget {
   const DailyActivitySummary({super.key});
@@ -41,12 +42,12 @@ class DailyActivitySummary extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         // Heading
-        const Text(
+        Text(
           "Daily activity summary",
           style: TextStyle(
             fontFamily: "Inter",
             fontWeight: FontWeight.w600,
-            fontSize: 18,
+            fontSize: Responsive.desktopText18,
             height: 28 / 18,
             color: Color(0xFF1E293B),
           ),
@@ -111,7 +112,7 @@ class DailyActivitySummary extends StatelessWidget {
                 style: TextStyle(
                   fontFamily: "Inter",
                   fontWeight: FontWeight.w500,
-                  fontSize: 14,
+                  fontSize: Responsive.desktopText14,
                   color: Colors.purple.shade600,
                 ),
               ),

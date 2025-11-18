@@ -289,10 +289,18 @@ class _LoginScreenState extends State<LoginScreen> {
                               elevation: 0,
                             ),
                             onPressed: isButtonEnabled
-                                ? () {
-                                    // logic after clicking continue button 
-                                  }
-                                : null,
+                              ? () {
+                                  String input = _phoneController.text.isNotEmpty
+                                      ? _phoneController.text.trim()
+                                      : _emailController.text.trim();
+
+                                  Navigator.pushNamed(
+                                    context,
+                                    '/otp',
+                                    arguments: input,
+                                  );
+                                }
+                              : null,
                             child: const Text(
                               "Continue",
                               style: TextStyle(

@@ -1,3 +1,4 @@
+import 'package:arovita/utils/responsive.dart';
 import 'package:flutter/material.dart';
 import '../../../models/health_tip.dart';
 import '../widgets/health_tip_card.dart';
@@ -36,10 +37,10 @@ class HealthTipsSection extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Text(
+        Text(
           "Health Tips",
           style: TextStyle(
-            fontSize: 18,
+            fontSize: Responsive.desktopText18,
             fontWeight: FontWeight.w600,
           ),
         ),

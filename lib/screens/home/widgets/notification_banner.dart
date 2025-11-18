@@ -1,3 +1,4 @@
+import 'package:arovita/utils/responsive.dart';
 import 'package:flutter/material.dart';
 
 class NotificationBanner extends StatelessWidget {
@@ -24,11 +25,11 @@ class NotificationBanner extends StatelessWidget {
         ),
       ),
       alignment: Alignment.centerLeft,
-      child: const Text(
+      child: Text(
         "You have 2 new messages from Dr. Johnson",
         style: TextStyle(
           fontFamily: "Inter",
-          fontSize: 14,
+          fontSize: Responsive.desktopText14,
           fontWeight: FontWeight.w400,
           height: 1.0,
           color: Color(0xFF1E293B),

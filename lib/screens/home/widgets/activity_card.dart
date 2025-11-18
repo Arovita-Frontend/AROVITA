@@ -1,3 +1,4 @@
+import 'package:arovita/utils/responsive.dart';
 import 'package:flutter/material.dart';
 import '../../../models/activity_data.dart';
 
@@ -21,8 +22,6 @@ class ActivityCard extends StatelessWidget {
     // Responsive Icon and Text Sizing
     final iconSize = isSmallScreen ? 32.0 : 40.0;
     final progressHeight = isSmallScreen ? 6.0 : 8.0;
-    final valueFontSize = isSmallScreen ? 18.0 : 22.0;
-    final labelFontSize = isSmallScreen ? 12.0 : 14.0;
     final iconRadius = iconSize / 1.4;
 
     return Padding(
@@ -43,7 +42,8 @@ class ActivityCard extends StatelessWidget {
             data.value,
             style: TextStyle(
               fontFamily: "Inter",
-              fontSize: valueFontSize,
+              // fontSize: valueFontSize,
+              fontSize: Responsive.desktopText24,
               fontWeight: FontWeight.w600,
               color: const Color(0xFF1E293B),
             ),
@@ -54,7 +54,7 @@ class ActivityCard extends StatelessWidget {
             data.label,
             style: TextStyle(
               fontFamily: "Inter",
-              fontSize: labelFontSize,
+              fontSize: Responsive.desktopText14,
               color: const Color(0xFF64748B),
             ),
           ),

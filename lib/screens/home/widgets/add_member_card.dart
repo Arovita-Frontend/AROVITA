@@ -12,8 +12,8 @@ class AddMemberCard extends StatelessWidget {
         // Use constraints for local responsiveness
         final isMobile = constraints.maxWidth < 600;
 
-        final double cardWidth = isMobile ? 161.5 : 453.3;
-        final double cardHeight = isMobile ? 98 : 198;
+        final double cardWidth = isMobile ? 161.5 : 450;
+        final double cardHeight = isMobile ? 98 : 188;
         final double borderRadius = isMobile ? 12 : 8;
         final double iconSize = isMobile ? 32 : 40;
 
@@ -50,7 +50,7 @@ class AddMemberCard extends StatelessWidget {
                   Text(
                     "Add Member",
                     style: TextStyle(
-                      fontSize: Responsive.paragraph, // keep centralized text size
+                      fontSize: Responsive.desktopText16,
                       fontWeight: FontWeight.w500,
                       color: const Color(0xFF7C3AED),
                     ),

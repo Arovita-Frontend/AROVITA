@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../../utils/responsive.dart';
 
 class DoctorCategoryCard extends StatelessWidget {
   final String label;
@@ -44,7 +45,7 @@ class DoctorCategoryCard extends StatelessWidget {
           Text(
             label,
             style: TextStyle(
-              fontSize: 14,
+              fontSize: Responsive.desktopText14,
               fontWeight: isMobile ? FontWeight.w400 : FontWeight.w500,
               color: const Color(0xFF1E293B),
             ),

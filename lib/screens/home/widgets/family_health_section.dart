@@ -1,3 +1,4 @@
+import 'package:arovita/utils/responsive.dart';
 import 'package:flutter/material.dart';
 import 'family_member_card.dart';
 import 'add_member_card.dart';
@@ -21,7 +22,7 @@ class FamilyHealthSection extends StatelessWidget {
             Text(
               "Family health",
               style: TextStyle(
-                fontSize: 18,
+                fontSize: Responsive.desktopText18,
                 fontWeight: FontWeight.w600,
                 color: const Color(0xFF1E293B),
               ),

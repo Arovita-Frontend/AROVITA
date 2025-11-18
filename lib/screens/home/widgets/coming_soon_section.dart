@@ -9,9 +9,6 @@ class ComingSoonSection extends StatelessWidget {
     final width = MediaQuery.of(context).size.width;
 
     final iconSize = width < 500 ? 28.0 : 34.0;
-    final titleSize = Responsive.cardHeading + 2; 
-    final subtitleSize = Responsive.cardParagraph;
-    final buttonFont = Responsive.cardHeading;
     final buttonHeight = Responsive.buttonHeight + 4;
     final buttonWidth = width < 500 ? 140.0 : 160.0;
 
@@ -37,7 +34,7 @@ class ComingSoonSection extends StatelessWidget {
             style: TextStyle(
               fontFamily: "Inter",
               fontWeight: FontWeight.w600,
-              fontSize: titleSize,
+              fontSize: Responsive.desktopText18,
               height: 1.0,
               color: const Color(0xFF1E293B),
             ),
@@ -50,7 +47,7 @@ class ComingSoonSection extends StatelessWidget {
             style: TextStyle(
               fontFamily: "Inter",
               fontWeight: FontWeight.w400,
-              fontSize: subtitleSize,
+              fontSize: Responsive.desktopText14,
               height: 1.0,
               color: const Color(0xFF64748B),
             ),
@@ -71,7 +68,7 @@ class ComingSoonSection extends StatelessWidget {
                 style: TextStyle(
                   fontFamily: "Inter",
                   fontWeight: FontWeight.w500,
-                  fontSize: buttonFont,
+                  fontSize: Responsive.desktopText16,
                   color: const Color(0xFF7C3AED),
                 ),
               ),

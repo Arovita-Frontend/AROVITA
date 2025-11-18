@@ -22,8 +22,8 @@ class FamilyMemberCard extends StatelessWidget {
     final bool isMobile = Responsive.isMobile;
 
     return Container(
-      width: isMobile ? 161.5 : 453.3,
-      height: isMobile ? 170 : 204,
+      width: isMobile ? 161.5 : 450,
+      height: isMobile ? 170 : 190,
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
         color: Colors.white,
@@ -57,7 +57,7 @@ class FamilyMemberCard extends StatelessWidget {
           Text(
             name,
             style: TextStyle(
-              fontSize: Responsive.paragraph,
+              fontSize: Responsive.desktopText16,
               fontWeight: FontWeight.w500,
               color: const Color(0xFF1E293B),
             ),
@@ -68,7 +68,7 @@ class FamilyMemberCard extends StatelessWidget {
           Text(
             "Age: $age",
             style: TextStyle(
-              fontSize: Responsive.paragraph - 2,
+              fontSize: Responsive.desktopText12,
               color: const Color(0xFF64748B),
             ),
           ),
@@ -79,7 +79,7 @@ class FamilyMemberCard extends StatelessWidget {
           Text(
             "BP: $bp",
             style: TextStyle(
-              fontSize: Responsive.paragraph - 2,
+              fontSize: Responsive.desktopText12,
               color: const Color(0xFF64748B),
             ),
           ),
@@ -99,7 +99,7 @@ class FamilyMemberCard extends StatelessWidget {
               Text(
                 "$hr BPM",
                 style: TextStyle(
-                  fontSize: Responsive.paragraph - 2,
+                  fontSize: Responsive.desktopText12,
                   color: isMobile
                       ? const Color(0xFF16A34A)
                       : const Color(0xFF64748B),

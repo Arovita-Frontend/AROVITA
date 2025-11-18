@@ -44,7 +44,7 @@ class HeartRateCard extends StatelessWidget {
                   Text(
                     "Heart Rate",
                     style: TextStyle(
-                      fontSize: Responsive.subHeading,
+                      fontSize: Responsive.desktopText18,
                       fontWeight: FontWeight.w600,
                       color: const Color(0xFF1E293B),
                       fontFamily: "Inter",
@@ -56,7 +56,7 @@ class HeartRateCard extends StatelessWidget {
                       Text(
                         "72",
                         style: TextStyle(
-                          fontSize: Responsive.subHeading,
+                          fontSize: Responsive.desktopText30,
                           fontWeight: FontWeight.w700,
                           color: const Color(0xFF1E293B),
                         ),
@@ -65,7 +65,7 @@ class HeartRateCard extends StatelessWidget {
                       Text(
                         "BPM",
                         style: TextStyle(
-                          fontSize: Responsive.cardHeading,
+                          fontSize: Responsive.desktopText14,
                           color: const Color(0xFF64748B),
                         ),
                       ),
@@ -79,7 +79,7 @@ class HeartRateCard extends StatelessWidget {
                         child: Text(
                           "Calm",
                           style: TextStyle(
-                            fontSize: Responsive.paragraph - 4,
+                            fontSize: Responsive.desktopText12,
                             fontWeight: FontWeight.w500,
                             color: Colors.white,
                           ),
@@ -98,7 +98,7 @@ class HeartRateCard extends StatelessWidget {
               ),
             ],
           ),
-          const SizedBox(height: 20),
+          const SizedBox(height: 10),
           // SECOND ROW
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -106,7 +106,7 @@ class HeartRateCard extends StatelessWidget {
               Text(
                 "HRV: 45ms | Stress: Low",
                 style: TextStyle(
-                  fontSize: Responsive.paragraph - 3,
+                  fontSize: Responsive.desktopText14,
                   color: const Color(0xFF64748B),
                 ),
               ),
@@ -121,7 +121,7 @@ class HeartRateCard extends StatelessWidget {
                 child: Text(
                   "Measure now",
                   style: TextStyle(
-                    fontSize: Responsive.paragraph-2,
+                    fontSize: Responsive.desktopText16,
                     fontWeight: FontWeight.w500,
                     color: Colors.white,
                   ),
@@ -157,7 +157,7 @@ class HeartRateCard extends StatelessWidget {
               Text(
                 "Heart Rate",
                 style: TextStyle(
-                  fontSize: Responsive.subHeading,
+                  fontSize: Responsive.desktopText16,
                   fontWeight: FontWeight.w600,
                   color: const Color(0xFF1E293B),
                   fontFamily: "Inter",
@@ -172,7 +172,7 @@ class HeartRateCard extends StatelessWidget {
                 child: Text(
                   "Calm",
                   style: TextStyle(
-                    fontSize: Responsive.paragraph - 2,
+                    fontSize: Responsive.desktopText12,
                     color: Colors.white,
                   ),
                 ),
@@ -190,7 +190,7 @@ class HeartRateCard extends StatelessWidget {
                   Text(
                     "72",
                     style: TextStyle(
-                      fontSize: Responsive.heading,
+                      fontSize: Responsive.desktopText30,
                       fontWeight: FontWeight.w700,
                       color: const Color(0xFF1E293B),
                     ),
@@ -199,7 +199,7 @@ class HeartRateCard extends StatelessWidget {
                   Text(
                     "BPM",
                     style: TextStyle(
-                      fontSize: Responsive.paragraph,
+                      fontSize: Responsive.desktopText14,
                       color: const Color(0xFF64748B),
                     ),
                   ),
@@ -228,7 +228,7 @@ class HeartRateCard extends StatelessWidget {
           // THIRD ROW – Button
           SizedBox(
             width: double.infinity,
-            height: Responsive.buttonHeight,
+            height: Responsive.buttonHeight+3,
             child: ElevatedButton.icon(
               style: ElevatedButton.styleFrom(
                 backgroundColor: const Color(0xFF7C3AED),
@@ -240,7 +240,7 @@ class HeartRateCard extends StatelessWidget {
               label: Text(
                 "Measure now",
                 style: TextStyle(
-                  fontSize: Responsive.paragraph,
+                  fontSize: Responsive.desktopText16,
                   fontWeight: FontWeight.w500,
                   color: Colors.white,
                 ),

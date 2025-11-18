@@ -31,7 +31,7 @@ class Responsive {
     if(isTablet) return 16;
     return 14;
   }
-
+  
   static double get cardHeading {
     if(isDesktop) return 17;
     if(isTablet) return 15;
@@ -49,6 +49,50 @@ class Responsive {
     if(isTablet) return 38;
     return 37;
   }
+
+  // this name suggest that for desktop we have 28px ssize and it will reduce accordingly to screen size 
+  static double get desktopText30 {
+    if(isDesktop) return 30;
+    if(isTablet) return 28;
+    return 26;
+  }
+
+  static double get desktopText24 {
+    if(isDesktop) return 24;
+    if(isTablet) return 22;
+    return 20;
+  }
+  
+  static double get desktopText20 {
+    if(isDesktop) return 20;
+    if(isTablet) return 18;
+    return 17;
+  }
+
+  static double get desktopText18 {
+    if(isDesktop) return 18;
+    if(isTablet) return 17;
+    return 16;
+  }
+
+  static double get desktopText16 {
+    if(isDesktop) return 16;
+    if(isTablet) return 15;
+    return 14;
+  }
+  
+  static double get desktopText14 {
+    if(isDesktop) return 14;
+    return 13;
+  }
+  
+
+  static double get desktopText12 {
+    if(isDesktop) return 12;
+    if(isTablet) return 10;
+    return 9;
+  }
+
 
   // ################ Icon / Floating Button Sizes ################
   static double get floatingButtonSize {

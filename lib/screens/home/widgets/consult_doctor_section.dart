@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'doctor_category_card.dart';
 import 'doctor_info_card.dart';
+import '../../../utils/responsive.dart';
 import 'consult_button.dart';
 
 class ConsultDoctorSection extends StatelessWidget {
@@ -29,12 +30,12 @@ class ConsultDoctorSection extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text(
+          Text(
             "Consult a Doctor",
             style: TextStyle(
-              fontSize: 18,
+              fontSize: Responsive.desktopText18,
               fontWeight: FontWeight.w600,
-              color: Color(0xFF1E293B),
+              color: const Color(0xFF1E293B),
             ),
           ),
 
@@ -125,7 +126,7 @@ class ConsultDoctorSection extends StatelessWidget {
                     field: doctor["field"]!,
                     imagePath: doctor["image"]!,
                     isMobile: isMobile,
-                    width: cardWidth+3,
+                    width: cardWidth + 3,
                   );
                 }).toList(),
               );

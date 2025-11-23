@@ -10,6 +10,8 @@ import 'screens/otp/otp_screen.dart';
 import 'screens/personalize/personalize_card.dart';
 import 'screens/medical_background/medical_background_screen.dart';
 import 'screens/lifestyle/lifestyle_page.dart';
+import 'screens/emergency_contacts/emergency_contacts_page.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -45,6 +47,8 @@ class MyApp extends StatelessWidget {
             '/lifestyle': (_) => const LifestylePage(),
 
             '/medical_background': (_) => const MedicalBackgroundScreen(),
+
+            '/emergency_contacts': (_) => const EmergencyContactsScreen(),
 
             // Main navigation screens
             '/home': (_) => const HomePage(),

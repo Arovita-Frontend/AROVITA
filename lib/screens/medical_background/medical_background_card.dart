@@ -405,7 +405,7 @@ class _MedicalBackgroundCardState extends State<MedicalBackgroundCard> {
                 ),
               ),
               onPressed: () {
-                Navigator.pushReplacementNamed(context, '/home');
+                Navigator.pushReplacementNamed(context, '/emergency_contacts');
               },
               child: Text(
                 "Save & Continue",
@@ -425,7 +425,7 @@ class _MedicalBackgroundCardState extends State<MedicalBackgroundCard> {
                 onTap: () {
                   Navigator.pushReplacementNamed(
                     context,
-                    '/home',
+                    '/emergency_contacts',
                   );
                 },
                 child: Text(

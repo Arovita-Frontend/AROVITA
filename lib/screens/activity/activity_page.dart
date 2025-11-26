@@ -16,7 +16,7 @@ class ActivityPage extends StatelessWidget {
           style: TextStyle(fontSize: 20),
         ),
       ),
-      bottomNavigationBar: BottomNavBar(currentIndex: 4),
+      bottomNavigationBar: BottomNavBar(currentIndex: 5),
     );
   }
 }

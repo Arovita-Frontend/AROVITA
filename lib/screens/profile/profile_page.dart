@@ -16,7 +16,7 @@ class ProfilePage extends StatelessWidget {
           style: TextStyle(fontSize: 20),
         ),
       ),
-      bottomNavigationBar: BottomNavBar(currentIndex: 3),
+      bottomNavigationBar: BottomNavBar(currentIndex: 4),
     );
   }
 }

@@ -11,6 +11,8 @@ import 'screens/personalize/personalize_card.dart';
 import 'screens/medical_background/medical_background_screen.dart';
 import 'screens/lifestyle/lifestyle_page.dart';
 import 'screens/emergency_contacts/emergency_contacts_page.dart';
+import 'screens/specialty/select_specialty_page.dart';
+import 'screens/choose_doctor/choose_doctor_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -50,12 +52,16 @@ class MyApp extends StatelessWidget {
 
             '/emergency_contacts': (_) => const EmergencyContactsScreen(),
 
+            '/choose_doctor': (_) => const ChooseDoctorPage(),
+
             // Main navigation screens
             '/home': (_) => const HomePage(),
             '/appointments': (_) => const AppointmentPage(),
             '/chat': (_) => const ChatPage(),
             '/profile': (_) => const ProfilePage(),
             '/activity': (_) => const ActivityPage(),
+
+            '/specialty': (_) => const SelectSpecialtyPage(),
           },
 
           // App starts here by default

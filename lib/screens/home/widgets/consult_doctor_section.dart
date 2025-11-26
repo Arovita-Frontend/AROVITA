@@ -137,7 +137,7 @@ class ConsultDoctorSection extends StatelessWidget {
           ConsultButton(
             isMobile: isMobile,
             onTap: () {
-              print("Tele-consultation button clicked!");
+              Navigator.pushNamed(context, '/specialty');
             },
           ),
         ],

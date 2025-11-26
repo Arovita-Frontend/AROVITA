@@ -16,7 +16,7 @@ class AppointmentPage extends StatelessWidget {
           style: TextStyle(fontSize: 20),
         ),
       ),
-      bottomNavigationBar: BottomNavBar(currentIndex: 1),
+      bottomNavigationBar: BottomNavBar(currentIndex: 2),
     );
   }
 }

@@ -13,6 +13,7 @@ import 'screens/lifestyle/lifestyle_page.dart';
 import 'screens/emergency_contacts/emergency_contacts_page.dart';
 import 'screens/specialty/select_specialty_page.dart';
 import 'screens/choose_doctor/choose_doctor_page.dart';
+import 'screens/doctor_details/doctor_details_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -54,6 +55,8 @@ class MyApp extends StatelessWidget {
 
             '/choose_doctor': (_) => const ChooseDoctorPage(),
 
+            '/doctor_details': (_) => const DoctorDetailsPage(),
+
             // Main navigation screens
             '/home': (_) => const HomePage(),
             '/appointments': (_) => const AppointmentPage(),
@@ -66,6 +69,7 @@ class MyApp extends StatelessWidget {
 
           // App starts here by default
           initialRoute: '/login',
+          // initialRoute: '/doctor_details',
         );
       },
     );

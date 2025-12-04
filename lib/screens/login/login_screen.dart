@@ -31,6 +31,13 @@ class _LoginScreenState extends State<LoginScreen> {
         isPhoneEntered = phoneController.text.trim().length >= 10;
       });
     });
+
+    // 🔥 When OTP becomes 6 digits → navigate to /home
+    otpController.addListener(() {
+      if (otpController.text.trim().length == 6) {
+        Navigator.pushReplacementNamed(context, "/home");
+      }
+    });
   }
 
   void startOtpTimer() {

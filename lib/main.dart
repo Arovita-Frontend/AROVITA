@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
-import 'screens/home/home_page.dart';
-import 'screens/appointments/appointment_page.dart';
-import 'screens/chat/chat_page.dart';
-import 'screens/profile/profile_page.dart';
-import 'screens/activity/activity_page.dart';
+import 'screens/home/homepage/home_page.dart';
+import 'screens/home/appointments/appointment_page.dart';
+import 'screens/home/chat/chat_page.dart';
+import 'screens/home/profile/profile_page.dart';
+import 'screens/home/activity/activity_page.dart';
 import 'utils/responsive.dart';
 import 'screens/login/login_screen.dart';
-import 'screens/otp/otp_screen.dart';
+import 'screens/login/otp/otp_screen.dart';
 import 'screens/personalize/personalize_card.dart';
 import 'screens/medical_background/medical_background_screen.dart';
-import 'screens/lifestyle/lifestyle_page.dart';
+import 'screens/survey/survey_page.dart';
 import 'screens/emergency_contacts/emergency_contacts_page.dart';
-import 'screens/specialty/select_specialty_page.dart';
-import 'screens/choose_doctor/choose_doctor_page.dart';
-import 'screens/doctor_details/doctor_details_page.dart';
-import 'screens/sign_up/sign_up_page.dart';
+import 'screens/home/doctor/specialty/select_specialty_page.dart';
+import 'screens/home/doctor/choose_doctor/choose_doctor_page.dart';
+import 'screens/home/doctor/doctor_details/doctor_details_page.dart';
+import 'screens/login/sign_up/sign_up_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -39,7 +39,7 @@ class MyApp extends StatelessWidget {
           // ===============================
           routes: {
             '/sign_up': (_) => const SignUpPage(),
-            
+
             '/login': (_) => const LoginScreen(),
 
             // OTP screen receives phone/email as argument
@@ -50,7 +50,7 @@ class MyApp extends StatelessWidget {
 
             '/personalize': (_) => const PersonalizeCard(),
 
-            '/lifestyle': (_) => const LifestylePage(),
+            '/survey': (_) => const SurveyPage(),
 
             '/medical_background': (_) => const MedicalBackgroundScreen(),
 
@@ -71,7 +71,8 @@ class MyApp extends StatelessWidget {
           },
 
           // App starts here by default
-          initialRoute: '/login',
+          // initialRoute: '/login',
+          initialRoute: '/survey',
           // initialRoute: '/doctor_details',
         );
       },

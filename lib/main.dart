@@ -14,6 +14,7 @@ import 'screens/emergency_contacts/emergency_contacts_page.dart';
 import 'screens/specialty/select_specialty_page.dart';
 import 'screens/choose_doctor/choose_doctor_page.dart';
 import 'screens/doctor_details/doctor_details_page.dart';
+import 'screens/sign_up/sign_up_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -37,6 +38,8 @@ class MyApp extends StatelessWidget {
           // Defines all top-level pages of the app
           // ===============================
           routes: {
+            '/sign_up': (_) => const SignUpPage(),
+            
             '/login': (_) => const LoginScreen(),
 
             // OTP screen receives phone/email as argument
